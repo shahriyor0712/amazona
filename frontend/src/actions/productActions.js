@@ -13,9 +13,6 @@ export const listProducts = () => async (dispatch) => {
         type:PRODUCT_LIST_REQUEST
     });
     try {
-        test asffasfasfaaf 
-        fasjlfjaslkfj
-        klafslkfajskl
         // const { data } = await Axios.get('http://127.0.0.1:5000/api/products');
         const { data } = await Axios.get('/api/products');
         dispatch({ type: PRODUCT_LIST_SUCCESS, payload: data });
