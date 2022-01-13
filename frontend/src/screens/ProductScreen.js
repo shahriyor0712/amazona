@@ -6,17 +6,18 @@ import { detailsProduct } from "../actions/productActions";
 import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
 import Rating from "../components/Rating";
+import { useParams } from "react-router-dom";
 
-export default function ProductScreen(props) {
+export default function ProductScreen() {
+  const params = useParams();
   const dispatch = useDispatch();
-  const productId = props.match.params.id;
+  const productId = params.id;
   const productDetails = useSelector( (state) => state.productDetails);
   const { loading, error, product } = productDetails;
 
   useEffect(() => {
     dispatch(detailsProduct(productId));
   }, [dispatch, productId]);
-
   return (
     <div>
     {loading ? (
@@ -28,7 +29,7 @@ export default function ProductScreen(props) {
       <Link to="/">Back to result</Link>
       <div className="row top">
         <div className="col-2">
-          <img className="large" src={product.image
+          <img className="large" src={product.Image
            } alt={product.name}></img>
         </div>
         <div className="col-1">
