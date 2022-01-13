@@ -1,0 +1,24 @@
+{
+  "name": "amazona",
+  "type": "module",
+  "description": "1. Introduction to this course   1. what you will build   2.what you will leave ",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.6.0",
+    "eslint-plugin-react": "^7.28.0",
+    "nodemon": "^2.0.15"
+  }
+}
